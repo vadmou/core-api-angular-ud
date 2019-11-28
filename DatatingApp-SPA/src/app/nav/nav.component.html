@@ -18,7 +18,8 @@
 
   <div *ngIf="loggedIn()" class="dropdown">
     <a class="dropdown-toggle text-light">
-      Welcome User
+      <!-- ? - if unique_name is not present, there will be no error -->
+      Welcome {{authService.decodedToken?.unique_name | titlecase}}
     </a>
   
     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
