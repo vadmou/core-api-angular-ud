@@ -45,6 +45,7 @@ namespace DatingApp.API
 
             // for each object within one request -> one dependency object is created
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
